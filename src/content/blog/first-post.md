@@ -1,16 +1,21 @@
 ---
-title: 'First post'
-description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Jul 08 2022'
-heroImage: '../../assets/blog-placeholder-3.jpg'
+title: 'First post!'
+description: 'I finally have a website!'
+pubDate: 'Sep 18 2025'
+icon: '../../assets/first-blog-icon.jpg'
+heroImage: '../../assets/first-blog-hero-image.jpg'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+I really can't believe it. I finally have a website. Several years of *just okay* coding in high school and college, and five years in the industry, and I finally have a **bona fide** website.
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+Once live (I'm writing this pre-launch), this will be my first project I've actually finished and launched. Life keeps me busy enough that I don't often have the time for side projects. This one is important to me, though, and I feel the need to get something out there. That's why I'm forcing myself to write this (as my wife and baby sleep soundly in the other room). I feel the push towards perfectionism and over-engineering too often, and I think that if a project I am creating can't go #1 on Product Hunt, then what's the point?
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
+The question is, though, what's the point of over-engineering and getting things so pixel-perfect? There can never be perfection in software. If so, wouldn't systems that have been in place for years have no need for bug fixes? Wouldn't an app require not new features, or not need a design refresh every so often? Humans, at their core, have flaws, and no one is perfect.
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
+ So why should I expect perfection from myself? Why fill an Android app with so many abstractions, tests, architecture enforcements, and docs when I have no idea if it is going to even be accepted to the Play Store *(I am primarily an Android software engineer, so get used to a lot of that popping up in these blogs)*?
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
+ I recently watched a YouTube video from Traversy Media about [the issues that developers have with side projects](https://youtu.be/Y_JQti8YLn0?si=DQc6m_gcXIUKbNGr). He gave several reasons for why many projects are never completed and never see the light of day. I definitely feel the tension of most, if not all, of the reasons listed, especially the fear of imperfection. It's why now, as I write this post (this first ever public post aside from social media blurbs), I feel anxious about sharing my thoughts to the world. I don't necessarily see myself as a good writer, or feel like I have anything to say that is of consequence.
+
+ Anyways, I don't think I have any answers or neat bow to tie on this. I didn't really think I'd get philosophical with this post. This was mostly my way of saying "Hello world, I have a website!". I plan to use this space as a place to air my thoughts on a lot of things. I'll implement tags or something of the sort in the future to split it into different categories. But, for now, thank you for reading!
+
+ – Bryce

@@ -6,9 +6,11 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "check": "astro check"
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.4",
     "@astrojs/mdx": "^4.3.4",
     "@astrojs/react": "^4.3.1",
     "@astrojs/rss": "^4.0.12",
@@ -19,6 +21,7 @@
     "astrobook": "^0.8.10",
     "sharp": "^0.34.2",
     "tailwindcss": "^4.1.11",
-    "tw-animate-css": "^1.3.6"
+    "tw-animate-css": "^1.3.6",
+    "typescript": "^5.9.2"
   }
 }
