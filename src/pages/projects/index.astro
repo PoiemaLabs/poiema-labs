@@ -1,0 +1,80 @@
+---
+import BaseHead from "../../components/common/BaseHead.astro";
+import Footer from "../../components/common/Footer.astro";
+import Header from "../../components/common/Header.astro";
+import Layout from "../../components/projects/ProjectCard.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../../consts";
+import { getCollection } from "astro:content";
+
+const projects = (await getCollection("projects")).sort(
+  (a, b) => (b.data.releaseDate?.valueOf() ?? 0) - (a.data.releaseDate?.valueOf() ?? 0)
+);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+      main {
+        width: 960px;
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .projects-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(158px, 1fr));
+        gap: 1.5rem;
+        padding: 1rem;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .projects-grid {
+          grid-template-columns: repeat(auto-fit, minmax(158px, 1fr));
+          gap: 1rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>🏗️ Projects</h1>
+      <section class="projects-grid" id="projects">
+        <ul>
+          {
+            projects.map((project) => (
+              <li>
+                <a href={`/projects/${project.id}`}>
+                  <Layout
+                    title={project.data.title}
+                    description={project.data.description}
+                    icon={project.data.icon}
+                    gradient={project.data.gradient}
+                  />
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>

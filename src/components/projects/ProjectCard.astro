@@ -1,0 +1,19 @@
+---
+import { Card } from './card.tsx';
+// src/components/ProjectCard.astro
+export interface Props {
+  title: string;
+  description: string;
+  icon?: string;
+  gradient?: string;
+}
+
+const { title, description, icon, gradient } = Astro.props;
+
+---
+<Card
+    title={title},
+    description={description}
+    icon={icon}
+    gradient={gradient}
+/>

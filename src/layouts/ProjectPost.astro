@@ -6,9 +6,9 @@ import Footer from '../components/common/Footer.astro';
 import FormattedDate from '../components/common/FormattedDate.astro';
 import Header from '../components/common/Header.astro';
 
-type Props = CollectionEntry<'blog'>['data'];
+type Props = CollectionEntry<'projects'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, heroImage, releaseDate } = Astro.props;
 ---
 
 <html lang="en">
@@ -65,13 +65,15 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				<div class="prose">
 					<div class="title">
 						<div class="date">
-							<FormattedDate date={pubDate} />
 							{
-								updatedDate && (
+								releaseDate ? (
 									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
+										Released on <FormattedDate date={releaseDate} />
 									</div>
-								)
+								) :
+								<div class="last-updated-on">
+										In progress
+								</div>
 							}
 						</div>
 						<h1>{title}</h1>
