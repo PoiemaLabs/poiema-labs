@@ -23,7 +23,7 @@ export function Card({
       style={style}
       aria-label={`View ${title} project`}
     >
-      {icon && (<img className="project-image" src={`${icon}`} alt={`${title} icon`} />)}
+      {icon && (<img className="project-image" src={icon} alt={`${title} icon`} />)}
       <div className="project-info">
         <h2 className="project-title">{title}</h2>
         <p className="project-description">{description}</p>

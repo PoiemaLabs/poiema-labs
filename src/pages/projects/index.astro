@@ -65,7 +65,7 @@ const projects = (await getCollection("projects")).sort(
                   <Layout
                     title={project.data.title}
                     description={project.data.description}
-                    icon={project.data.icon}
+                    icon={project.data.icon?.src}
                     gradient={project.data.gradient}
                   />
                 </a>

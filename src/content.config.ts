@@ -24,7 +24,7 @@ const projects = defineCollection({
 			title: z.string(),
 			description: z.string(),
 			heroImage: image().optional(),
-			icon: z.string().optional(),
+			icon: image().optional(),
 			gradient: z.string().optional(),
 			releaseDate: z.coerce.date().optional()
 		}),
