@@ -6,8 +6,6 @@ import react from "@astrojs/react";
 import astrobook from "astrobook";
 import { defineConfig } from "astro/config";
 
-import tailwindcss from "@tailwindcss/vite";
-
 // https://astro.build/config
 export default defineConfig({
   site: "https://poiemalabs.com",
@@ -24,8 +22,4 @@ export default defineConfig({
       )
       : null,
   ],
-
-  vite: {
-    plugins: [tailwindcss()],
-  },
 });

@@ -2,19 +2,21 @@
 import BaseHead from '../components/common/BaseHead.astro';
 import Footer from '../components/common/Footer.astro';
 import Header from '../components/common/Header.astro';
+import ContactForm from '../components/contact-us/contactForm';
 ---
 
 <html lang="en">
 	<head>
-		<BaseHead title="About Us" description="Check us out!" />
+		<BaseHead title="Contact Us" description="Check us out!" />
 	</head>
 
 	<body>
 		<Header />
 		<main>
 			<h1>Get In Touch</h1>
-			<p class="subhead">I am always down to talk about potential projects! Drop me a message down below.
-		</main>
+			<p class="subhead">I am always down to talk about potential projects! Drop me a message down below.</p>
+			<ContactForm client:load />
+			</main>
 		<Footer />
 	</body>
 </html>
