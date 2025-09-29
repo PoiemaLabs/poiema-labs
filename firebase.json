@@ -1,0 +1,48 @@
+{
+  "functions": [
+    {
+      "source": "./functions",
+      "codebase": "default",
+      "ignore": [
+        "**/node_modules/**",
+        "firebase.json",
+        "**/.*",
+        "firebase-debug.log",
+        "firebase-debug.*.log"
+      ]
+    }
+  ],
+  "hosting": {
+    "public": "dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/submitForm",
+        "function": {
+          "functionId": "submitForm",
+          "region": "us-central1",
+          "pinTag": true
+        }
+      }
+    ]
+  },
+  "emulators": {
+    "functions": {
+      "port": 5001
+    },
+    "firestore": {
+      "port": 8081
+    },
+    "hosting": {
+      "port": 5002
+    },
+    "ui": {
+      "enabled": true
+    },
+    "singleProjectMode": true
+  }
+}

@@ -2,6 +2,10 @@
   "name": "poiemalabs",
   "type": "module",
   "version": "0.0.1",
+  "engines": {
+    "node": "22",
+    "npm": "<=11.0.0"
+  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -17,8 +21,14 @@
     "@astrojs/sitemap": "^3.5.1",
     "astro": "^5.13.8",
     "astrobook": "^0.8.10",
+    "firebase": "^12.3.0",
+    "sanitize": "^2.1.2",
     "sharp": "^0.34.2",
     "tw-animate-css": "^1.3.6",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "validator": "^13.15.15"
+  },
+  "devDependencies": {
+    "@types/validator": "^13.15.3"
   }
 }

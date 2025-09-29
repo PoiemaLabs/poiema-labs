@@ -19,16 +19,41 @@ const ContactForm = () => {
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) {
-    console.log("Made it!");
     const { name, value } = e.target;
-    console.log(`new value: ${value}`);
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   }
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault(); // Prevent default form submission
 
-    console.log("Form data submitted:", formData);
+    fetch(
+      // "https://us-central1-poiema-labs-llc.cloudfunctions.net/submitForm",
+      "http://127.0.0.1:5002/submitForm",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          message: formData.message,
+        }),
+      }
+    )
+      .then((response) => {
+        if (response.ok) {
+          setFormData({ name: "", email: "", company: "", message: "" }); // Reset form
+          alert("Thanks for reaching out! We'll be in touch shortly.");
+        } else {
+          alert("Failed to submit the form. Please try again.");
+        }
+      })
+      .catch((error) => {
+        console.error("Error submitting form:", error);
+        alert("An error occurred while submitting the form. Please try again.");
+      });
   }
 
   return (
@@ -36,39 +61,39 @@ const ContactForm = () => {
       <span className="heading">Contact Us</span>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name*:</label>
-          <input
-            id="name"
-            name="name"
-            type="text"
-            onChange={handleChange}
-            autoComplete="name"
-            required
-          />
+        <input
+          id="name"
+          name="name"
+          type="text"
+          onChange={handleChange}
+          autoComplete="name"
+          required
+        />
         <label htmlFor="email">Email*:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            autoComplete="email"
-            onChange={handleChange}
-            required
-          />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          autoComplete="email"
+          onChange={handleChange}
+          required
+        />
         <label htmlFor="company">Company:</label>
-          <input
-            id="company"
-            name="company"
-            autoComplete="company"
-            onChange={handleChange}
-            type="text"
-          />
+        <input
+          id="company"
+          name="company"
+          autoComplete="company"
+          onChange={handleChange}
+          type="text"
+        />
         <label htmlFor="message">Message*:</label>
-          <textarea
-            id="message"
-            name="message"
-            onChange={handleChange}
-            required
-            defaultValue={""}
-          />
+        <textarea
+          id="message"
+          name="message"
+          onChange={handleChange}
+          required
+          defaultValue={""}
+        />
         <button type="submit">Submit</button>
       </form>
     </div>
