@@ -1,22 +1,128 @@
 ---
-import BaseHead from '../components/common/BaseHead.astro';
-import Footer from '../components/common/Footer.astro';
-import Header from '../components/common/Header.astro';
-import ContactForm from '../components/contact-us/contactForm';
+import BaseHead from "../components/common/BaseHead.astro";
+import Footer from "../components/common/Footer.astro";
+import Header from "../components/common/Header.astro";
 ---
 
 <html lang="en">
-	<head>
-		<BaseHead title="Contact Us" description="Check us out!" />
-	</head>
+  <head>
+    <BaseHead title="Contact Us" description="Check us out!" />
+    <style>
+      .contact-form {
+        max-width: 960px;
+        background-color: #f2f2f2;
+        padding: 24px 32px;
+        border-radius: 10px;
+      }
 
-	<body>
-		<Header />
-		<main>
-			<h1>Get In Touch</h1>
-			<p class="subhead">I am always down to talk about potential projects! Drop me a message down below.</p>
-			<ContactForm client:load />
-			</main>
-		<Footer />
-	</body>
+      .contact-form label {
+        color: black;
+      }
+
+      .contact-form .heading {
+        font-size: 24px;
+        color: black;
+        margin-bottom: 12px;
+        font-weight: bold;
+        display: block;
+      }
+
+      .contact-form form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .contact-form label {
+        margin-bottom: 10px;
+      }
+
+      textarea {
+        resize: vertical;
+        height: 100px;
+        /* width: 200px; */
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+
+      .contact-form input:focus,
+      .contact-form textarea:focus {
+        outline: none;
+        box-shadow: 0 0 5px #000d8a;
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .contact-form button[type="submit"] {
+        background-color: #000d8a;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .contact-form button[type="submit"]:hover {
+        transform: scale(1.03);
+        transition: transform 0.3s ease-in-out;
+      }
+    </style>
+  </head>
+
+  <body>
+    <Header />
+    <main>
+      <h1>Get In Touch</h1>
+      <p class="subhead">
+        I am always down to talk about potential projects! Drop me a message
+        down below.
+      </p>
+      <div class="contact-form">
+        <span class="heading">Contact Us</span>
+        <form
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          name="feedback"
+          method="POST"
+          action="/success"
+        >
+          <input type="hidden" name="form-name" value="feedback" />
+
+          <label for="name">Name*:</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            autocomplete="name"
+            required
+          />
+          <label for="email">Email*:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+            required
+          />
+          <label for="company">Company:</label>
+          <input
+            id="company"
+            name="company"
+            autocomplete="company"
+            type="text"
+          />
+          <label for="message">Message*:</label>
+          <textarea id="message" name="message" required> </textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </main>
+    <Footer />
+  </body>
 </html>
