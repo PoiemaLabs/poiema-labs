@@ -4,6 +4,10 @@ This is the website for Poiema Labs, LLC. It exists to showcase our current/past
 
 ## Tech Stack
 
+### #️⃣ [TypeScript](https://www.typescriptlang.org/): Strongly-typed superset of JavaScript for safer, scalable code
+
+### ⚛️ [React](https://react.dev/): JavaScript library for building reusable UI components
+
 ### 🚀 [Astro](https://astro.build/): JavaScript framework for fast, content-driven websites
 
 ### 📕 [Astrobook](http://github.com/ocavue/astrobook/): Storybook alternative for Astro sites
