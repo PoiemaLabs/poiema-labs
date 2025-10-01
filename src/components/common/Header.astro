@@ -1,12 +1,10 @@
 ---
-import { SITE_TITLE } from '../../consts';
 import HeaderLink from './HeaderLink.astro';
 ---
 
 <header>
 	<nav>
-		<!-- <img class="logo" src="/src/assets/logo.png"/> -->
-		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<a class="logo-link" href="/"><img class="logo" src="/src/assets/logo.svg"/></a>
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/blog">Blog</HeaderLink>
@@ -16,6 +14,15 @@ import HeaderLink from './HeaderLink.astro';
 	</nav>
 </header>
 <style>
+	nav .logo-link {
+		padding: 20px 20px 10px 10px;
+		border: none;
+	}
+
+	.logo {
+		height: 60px;
+		margin-right: 1em;
+	}
 	header {
 		margin: 0;
 		padding: 0 1em;
