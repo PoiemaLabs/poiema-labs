@@ -7,14 +7,15 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../../consts";
 import { getCollection } from "astro:content";
 
 const projects = (await getCollection("projects")).sort(
-  (a, b) => (b.data.releaseDate?.valueOf() ?? 0) - (a.data.releaseDate?.valueOf() ?? 0)
+  (a, b) =>
+    (b.data.releaseDate?.valueOf() ?? 0) - (a.data.releaseDate?.valueOf() ?? 0)
 );
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <BaseHead title="🏗️ Projects" description={SITE_DESCRIPTION} />
     <style>
       main {
         width: 960px;

@@ -1,9 +1,6 @@
 ---
 title: 'Worship in Context Website'
-description: 'Lorem ipsum dolor sit amet'
-heroImage: '../../assets/blog-placeholder-3.jpg'
-releaseDate: 'Jul 08 2025'
+description: 'Website for an A/V installation'
+heroImage: "./worship-in-context.jpg"
 icon: '../../assets/blog-placeholder-3.jpg'
 ---
-
-Yay!

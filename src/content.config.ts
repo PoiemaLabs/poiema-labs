@@ -23,8 +23,8 @@ const projects = defineCollection({
 		z.object({
 			title: z.string(),
 			description: z.string(),
-			heroImage: image().optional(),
-			icon: image().optional(),
+			heroImage: image(),
+			icon: image(),
 			gradient: z.string().optional(),
 			releaseDate: z.coerce.date().optional()
 		}),

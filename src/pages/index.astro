@@ -1,21 +1,158 @@
 ---
-import BaseHead from '../components/common/BaseHead.astro';
-import Footer from '../components/common/Footer.astro';
-import Header from '../components/common/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import BaseHead from "../components/common/BaseHead.astro";
+import Footer from "../components/common/Footer.astro";
+import Header from "../components/common/Header.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>Crafted with Purpose</h1>
-			<p class="subhead">We can't wait to show you what's in store!</p>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+      .block-text {
+        text-align: justify;
+      }
+
+      .pre-list-text {
+        margin-bottom: 0px;
+      }
+
+      li {
+        display: list-item;
+      }
+      ol > h4,
+      ul {
+        font-weight: normal;
+        padding-left: 36px;
+      }
+    </style>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>Crafted with Purpose</h1>
+      <p class="subhead">Creating intentional software to help people</p>
+      <br />
+
+      <h3>Who am I?</h3>
+      <p class="block-text">
+        Currently, Poiema Labs is a one-man band. My name is Bryce Buchanan, and
+        I am a developer based in Oklahoma City, OK. I am primarily a mobile
+        developer attempting to break into the web development scene. I got my
+        B.S. in Computer Engineering from the University of Oklahoma in 2020,
+        and my M.S. in Electrical/Computer Engineering (specializing in machine
+        learning and telecommunications technology) in 2021. I have been in the
+        industry since 2021, working as a mobile developer for a couple
+        different ministry-based companies. You can read more about me on my
+        <a href="https://www.linkedin.com/in/bryce-buchanan/">LinkedIn</a>
+        page.
+      </p>
+      <p class="block-text">
+        My heart is for the Church, ministries, and small businesses. My goal is
+        to
+        <strong>
+          provide them with the software they need, in order to uniquely reach
+          the people only they can.
+        </strong>
+      </p>
+      <br />
+
+      <h3>Why "Poiema"?</h3>
+      <p class="block-text">
+        "Poiema", in Greek, translates to "workmanship" or "handiwork."
+        Ephesians 2:10 states, "For we are his workmanship, created in Christ
+        Jesus for good works, which God prepared beforehand, that we should walk
+        in them." I chose Poiema because, at the root, I am a masterpiece,
+        created by God, for doing good in this world. He ordained that I would
+        be born in such a time as this for His good purposes. As God is the
+        Creator, I am also a creator (with a lowercase 'c'), and I should strive
+        to create things with skill and intention in a way that honors God and
+        serves others. I'll get more into that in my guiding principles.
+      </p>
+      <br />
+
+      <h3>4 Guiding Principles</h3>
+      <p class="block-text">
+        As a Christian, developer, and member of this planet, I hold myself to 4
+        guiding principles. If you see me deviating from these principles,
+        please call me out.
+        <ol>
+          <h4>
+            <li>
+              I will <strong>honor God in my practices</strong>
+            </li>
+          </h4>
+          <p class="block-text pre-list-text">
+            I believe that Christ has set me free. Because of that truth, I want
+            to see others set free. My mission is to build software that serves
+            people's real needs, not to harvest data, chase ad revenue, or keep
+            users hooked. Therefore, I commit to building software that is:
+          </p>
+          <ul>
+            <li>non-addictive</li>
+            <li>life-giving</li>
+            <li>empowering</li>
+          </ul>
+          <br />
+
+          <h4>
+            <li>I will <strong>use AI responsibly</strong></li>
+          </h4>
+          <p class="block-text">
+            AI is a buzzword right now. Companies are trying to adopt it
+            everywhere, or force it into your hands. It definitely has perks
+            associated with utilizing it, as long as care and caution are given
+            to it. I commit that any AI integrated into the software I write
+            will be done with thorough research and deliberation.
+          </p>
+          <p class="block-text">
+            You may have heard the term "AI slop" or "vibe coding", associated
+            with software created almost entirely with AI. While it has come a
+            long way, there are still many challenges with adopting these
+            practices. I almost certainly, in my learning journey and
+            development workflows, will use AI in code completion, and in the
+            pursuit of understanding concepts. I commit to never copy-and-paste
+            code without understanding and editing, and I hope to write most of
+            the code myself (it's just so much fun for me!).
+          </p>
+
+          <h4>
+            <li>I will <strong>always strive for improvement</strong></li>
+          </h4>
+          <p class="block-text">
+            I have a strong desire to know everything in tech, and be able to
+            write in any language, for any system. This can be a daunting task,
+            but it has the side effect of giving me a spirit of learning and
+            improvement. I commit to never stop learning, not be satisfied with
+            "just okay", and constantly work to improve my skills, processes,
+            and communication. At the end of the day, I want to be the best
+            resource I can be for you, at a fraction of the cost of a software
+            agency.
+          </p>
+
+          <h4>
+            <li>I will <strong>never take myself too seriously</strong></li>
+          </h4>
+          <p class="block-text">
+            Maybe you could tell by my informal writing style, but I don't view
+            myself as a fully polished person. I like to have fun with my work,
+            while maintaining a punctual and professional environment. I commit
+            to delivering solutions in a timely manner, while keeping things
+            light.
+          </p>
+        </ol>
+        <br />
+
+        <h3>Interested in working with me?</h3>
+        <p class="block-text">
+          Have a project in mind? Have a problem that needs solving? I'd love to
+          talk to you! Head on over to <a href="/contact-us">Contact Us</a> and fill
+          out the project form. I will get back to you soon!
+        </p>
+        <br />
+      </p>
+    </main>
+    <Footer />
+  </body>
 </html>
